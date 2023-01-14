@@ -1,0 +1,15 @@
+.searchBar {
+    /* margin-left: rem; */
+    margin-left: 7rem;
+    margin-top: 0.5rem;
+    border-radius: 0.375rem;
+    padding: 0.4rem;
+    border: 2px solid orange
+}
+
+.searchWrapper {
+    display: flex;
+}
+.searchBar input {
+    flex-grow: 1;
+}
