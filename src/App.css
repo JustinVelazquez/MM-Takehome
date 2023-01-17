@@ -5,3 +5,10 @@
 .list {
   background-color: rgb(243 244 246);
 }
+
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
