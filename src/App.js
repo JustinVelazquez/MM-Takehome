@@ -10,7 +10,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import UserCardGrid from './components/UserCardGrid/UserCardGrid';
 
 const App = () => {
-  // Fetching our API
+  // Fetching our API, limiting the results to 100
   const url = 'https://randomuser.me/api/?results=100';
   const { isLoading, data, error } = useFetch(url);
 
@@ -20,7 +20,7 @@ const App = () => {
 
   useEffect(() => {
     setUsers(data?.results);
-  }, []);
+  },[data?.results]);
 
   const handleFilterUsers = (event) => {
     setFilterQuery(event.target.value);
@@ -91,7 +91,6 @@ const App = () => {
 
   return (
     <div className="list">
-      {/* <SearchBar /> */}
       <section className="searchWrapper">
         <form className="searchBar">
           <input
@@ -109,7 +108,7 @@ const App = () => {
           <option value="city">City</option>
         </select>
       </section>
-      <UserCardGrid users={users} />;
+      <UserCardGrid users={users}  />
     </div>
   );
 };
